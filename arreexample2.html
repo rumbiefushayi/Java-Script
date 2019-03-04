@@ -1,10 +1,12 @@
 <html>
 <body>
-    <div id=things>
-    </div>
+    
 
 	<script>
-     document.getElementById('things').innerHTML= "<ul>" + "<li>" + "Harvey" + "</li>" + "<li>" + "has" + "</li>" + "<li>" + "12" + "</li>" + "<li>" + "cars" + "</li>" + "</ul>"	
+	var things = [ "Harvey", 11, 23, "Cars"];
+	things.push("twelve"); 
+	
+     document.write ( "<ul>" + "<li>" + "Harvey" + "</li>" + "<li>" + "has" + "</li>" + "<li>" + "12" + "</li>" + "<li>" + "cars" + "</li>" + "</ul>" )	
     </script>
 	
 </body>
