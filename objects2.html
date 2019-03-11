@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+   <script>
+    var Corolla = {
+	brand: "Toyota",
+	make: "Corolla",
+	type: "Sedan",
+	color: "blue",
+	yearOfRelease: "1997"
+    };
+
+    var Rangerover = {
+	brand: "Rangerover",
+	make: "sport",
+	type: "SUV",
+	color: "white",
+	yearOfRelease: "2010"
+    };
+
+    var car = [Corolla, Rangerover]
+
+    var text = "";
+    var i;
+    for (i = 0; i <car.length; i++) {
+  				text += "This is a " + car[i].brand +  " car called a " + car[i].make + " ! " + "</br>" + " It is called a " + "" + car[i].type + " which is " + car[i].color + " and was released in " + "" + car[i].yearOfRelease + "." + "<br>" + "</br>";
+	}
+    document.write(text);
+    
+
+   </script> 
+  </body>
+</html>
