@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="objects.js"></script> 
+    <style>
+          p{display: none;}
+    </style>
   </head>
   <body>
+        <button class="guy"> Click me to show the cars </button>
+        <button class="girl"> Click me to hide the cars </button>   
    <script>
+
     var Corolla = {
 	brand: "Toyota",
 	make: "Corolla",
@@ -18,19 +25,29 @@
 	make: "sport",
 	type: "SUV",
 	color: "white",
-	yearOfRelease: "2010"
+	yearOfRelease: "2003"
     };
 
     var car = [Corolla, Rangerover]
 
-    var text = "";
-    var i;
-    for (i = 0; i <car.length; i++) {
-  				text += "This is a " + car[i].brand +  " car called a " + car[i].make + " ! " + "</br>" + " It is called a " + "" + car[i].type + " which is " + car[i].color + " and was released in " + "" + car[i].yearOfRelease + "." + "<br>" + "</br>";
-	}
-    document.write(text);
-    
+     var pickup = {
+      brand: "Nissan",
+      make: "hard body",
+      type: "pick up truck",
+      color: "grey",
+      yearOfRelease: "2010"
+       };
 
-   </script> 
+    
+    car.splice(0,0,pickup)
+    var text = "";
+    var i = 0;
+     do {
+    document.write("<p>" + "This is a " + car[i].brand +  " car called a " + car[i].make + " ! " + "</br>" + " It is called a " + "" + car[i].type + " which is " + car[i].color + " and was released in " + "" + car[i].yearOfRelease + "." + "<p>"); 
+       i++;
+     }
+       while (i < car.length)
+   </script>
+          
   </body>
 </html>
