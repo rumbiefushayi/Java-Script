@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+       <script>
+       	  function Person(name, surname, age, gender){
+       	  	this.name = name
+       	  	this.surname = surname
+       	  	this.age = age
+       	  	this.gender= gender
+
+       	    this.people= function(){
+       	 	document.write(" Hi, My name is " + this.name + " of house " + this.surname + ". "  + "I am " + this.age + " and I am " + this.gender + "</br>")
+       	   		}
+       	}
+          
+           var person1 = new Person("Tau", "Munodawafa", 24, "male");
+           var person2 = new Person( "Rumbidzai", "Fushayi", 24, "female");
+           var person3 = new Person("Tatenda", "Marshall", 22, "male");
+           var person4 = new Person( "Joy", "Gomba", 24, "female");
+
+           person1.people();
+           person2.people();
+           person3.people();
+           person4.people();
+       	 
+       </script>
+
+</body>
+</html>
