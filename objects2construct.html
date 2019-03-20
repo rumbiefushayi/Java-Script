@@ -11,7 +11,7 @@
        	  	this.age = age
        	  	this.gender= gender
 
-       	    this.people= function(){
+       	    this.toString= function(){
        	 	document.write(" Hi, My name is " + this.name + " of house " + this.surname + ". "  + "I am " + this.age + " and I am " + this.gender + "</br>")
        	   		}
        	}
@@ -21,10 +21,10 @@
            var person3 = new Person("Tatenda", "Marshall", 22, "male");
            var person4 = new Person( "Joy", "Gomba", 24, "female");
 
-           person1.people();
-           person2.people();
-           person3.people();
-           person4.people();
+           person1.toString();
+           person2.toString();
+           person3.toString();
+           person4.toString();
        	 
        </script>
 
