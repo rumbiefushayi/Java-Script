@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+       <script>
+       	  function Person(name, surname, age, gender, interests){
+       	  	this.fname = name
+       	  	this.surname = surname
+       	  	this.age = age
+       	  	this.gender= gender
+       	  	this.interests= interests
+
+       	    this.toString= function(){
+       	 	document.write(" Hi, My name is " + this.fname + " of house " + this.surname + ". "  + "I am " + this.age + " and I am " + this.gender + " and I like " + this.interests + "." + "</br>")
+       	   		}
+       	  }
+          
+           var person1 = new Person("Tau", "Munodawafa", 24, "male", ["eating", "swindling"]);
+           var person2 = new Person( "Rumbidzai", "Fushayi", 24, "female", ["baking", "reading"]);
+           var person3 = new Person("Tatenda", "Marshall", 22, "male", ["listening music", "sleeping"]);
+           var person4 = new Person( "Joy", "Gomba", 24, "female", ["travelling", "movies"]);
+           var person5 = new Person("Shalom", "Chinakidzwa", 20, "female", ["eating", "singing"])
+           var person6 = new Person("Sipa", "Ndlovu", 24, "female", ["baking", "travelling"])
+           var person7 = new Person("Yvonne", "Mare", 24,"female", ["dancing", "cooking"])
+           person1.toString();0
+           person2.toString();
+           person3.toString();
+           person4.toString();
+           person5.toString();
+           person6.toString();
+           person7.toString();
+           
+       	    //define an object "Classroom"with the properties name, student
+          function Classroom(name, students){
+               this.name = name
+               this.students= students;
+
+                this.toString= function(){
+                    text= " </br> Hello, this is the Microworkspace class. The class list is : <br/><ul>"
+
+                      for (i=0; i < this.students.length; i++){
+                          text += "<li>";
+       ￼                   text += this.students[i].fname + " " + this.students[i].surname;
+                          text += "</li>";
+                        }
+                      text += "</ul>";
+                         document.write(text);   
+                  }
+                        
+                
+               this.averageAge= function(){
+                    var totalAge = 0;
+
+                      for (i=0; i < this.students.length; i++) {
+                          totalAge += this.students[i].age;
+                         }
+                      var average = totalAge/ this.students.length;
+
+                      document.write("The average of the class is " + average);
+            }
+          }
+          //create a classroom instance called "Microworkspace" and place your 4 persons  under an array students
+            var class1 = new Classroom ("Microworkspace", [person1, person2, person3, person4, person5, person6, person7]);
+
+              class1.averageAge();
+              class1.toString();
+
+      </script>
+</body>
+</html>
